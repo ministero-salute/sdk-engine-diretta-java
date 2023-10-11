@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot>
+   <REGIONE cod_reg="120">
+      <PERIODO mese="05" anno="2022">
+         <ASL cod_asl="120918">
+            <EROGATORE tipo_er="01" id_er="120918">
+               <ASSISTITO id_ass="bLFuIeZTSuyLFfxvfEn1NtJsTv1PaZVGIIwFZNbP4bE=Hozsg2nXBTQ7dG5JE+Be9ujAXn0i/NoA/gXjjswVw8s=" vld_id_ass="0" tip_id_ass="0" dat_nasc="1972-01-01" sesso="2" cod_asl_ass="120201" citt="1">
+                  <OPERAZIONE tipo_op="I">
+                     <PRESCRIZIONE tipo_cont="2" id_cont="29181209186159462022" dat_erog="2022-05-07" tipo_esen="9" tipo_erog="03" tipo_canale="D" quota_fissa_ass="0.00" quota_perc_ass="0.00" dat_pres="2022-05-07" costo_srv_ric="0.00">
+                        <PRESCRITTORE tipo_pr="U" cod_pr="0000000000000000"/>
+                        <FARMACO cod_f="045660014" tipo_f="1" targatura="0000000000" costo_acq="655.41" costo_srv="0.00" qta="1" fatt_conv="1"/>
+                     </PRESCRIZIONE>
+                  </OPERAZIONE>
+               </ASSISTITO>
+            </EROGATORE>
+         </ASL>
+      </PERIODO>
+   </REGIONE>
+</dataroot>

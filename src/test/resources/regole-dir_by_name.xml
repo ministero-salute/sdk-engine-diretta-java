@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flusso>
+   <campo nomecampo="codReg">
+      <regola codiceErrore="1901" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="B01" nome="regolaDominioValoriAnagrafica">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>nomeTabella</key>
+                  <value>Regioni</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="anno">
+      <regola codiceErrore="1921" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="B20" nome="regolaRegex">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>regex</key>
+                  <value>[12]\d{3}</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="mese">
+      <regola codiceErrore="1921" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="B20" nome="regolaRegex">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>regex</key>
+                  <value>(0[1-9]|1[0-2])</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="codAsl">
+      <regola codiceErrore="2041" nome="regolaObbligatorieta"/>
+   </campo>
+   <campo nomecampo="tipoEr">
+      <regola codiceErrore="1921" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="B44" nome="regolaListaValoriAmmessi">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>listaValoriAmmessi</key>
+                  <value>01|02|03|04|05|06</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+      <regola codiceErrore="1921" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="B36" nome="regolaDominioValoriAnagrafica">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>nomeTabella</key>
+                  <value>Tipologia_di_erogazione</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="idEr">
+      <regola codiceErrore="1921" nome="regolaObbligatorieta"/>
+   </campo>
+   <campo nomecampo="tipoCanale">
+      <regola codiceErrore="1921" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="8001" nome="regolaListaValoriAmmessi">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>listaValoriAmmessi</key>
+                  <value>D|OP|R</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="tipoStr">
+      <regola codiceErrore="1921" nome="regolaObbligatorietaCondizionataValoreCampo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>parametroCampoCondizionante</key>
+                  <value>02</value>
+               </entry>
+               <entry>
+                  <key>nomeCampoCondizionante</key>
+                  <value>tipoEr</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+      <regola codiceErrore="8001" nome="regolaListaValoriAmmessiCampoFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>listaValoriAmmessi</key>
+                  <value>01|02|03|04|05</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="datErog">
+      <regola codiceErrore="1921" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="B20" nome="regolaRegex">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>regex</key>
+                  <value>([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="tipoErog">
+      <regola codiceErrore="1921" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="B44" nome="regolaListaValoriAmmessi">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>listaValoriAmmessi</key>
+                  <value>01|02|03|04|05|06</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+      <regola codiceErrore="1921" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="B36" nome="regolaDominioValoriAnagrafica">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>nomeTabella</key>
+                  <value>Tipologia_di_erogazione</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="tipoCont">
+      <regola codiceErrore="1921" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="D06" nome="regolaListaValoriAmmessi">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>listaValoriAmmessi</key>
+                  <value>1|2</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="idCont">
+      <regola codiceErrore="1921" nome="regolaObbligatorieta"/>
+   </campo>
+   <campo nomecampo="codPr">
+      <regola codiceErrore="D17" nome="regolaOmissioneCrossCampo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>valoreDipendente</key>
+                  <value>Z</value>
+               </entry>
+               <entry>
+                  <key>campoDipendente</key>
+                  <value>tipoPr</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="tipoPr">
+      <regola codiceErrore="1921" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="D27" nome="regolaDominioValoriAnagrafica">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>nomeTabella</key>
+                  <value>Tipologia_prescrittore</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="datPres">
+      <regola codiceErrore="B20" nome="regolaRegexCampoFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>regex</key>
+                  <value>([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="idAss">
+      <regola codiceErrore="1921" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="2043" nome="regolaLunghezzaCampoObbligatorio">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>size</key>
+                  <value>88</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="vldIdAss">
+      <regola codiceErrore="1921" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="8001" nome="regolaListaValoriAmmessi">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>listaValoriAmmessi</key>
+                  <value>0|1</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="tipIdAss">
+      <regola codiceErrore="1921" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="8001" nome="regolaListaValoriAmmessi">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>listaValoriAmmessi</key>
+                  <value> 0|1|2|3|4|97|98|99</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="citt">
+      <regola codiceErrore="2041" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="2075" nome="regolaEsistenzaDisuguaglianzaCrossCampo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>nomeCampoCoerente</key>
+                  <value>tipIdAss</value>
+               </entry>
+               <entry>
+                  <key>listaValoriIncoerenti</key>
+                  <value>1|2|3</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="codAslAss">
+      <regola codiceErrore="1203" nome="regolaLunghezzaCampoFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>size</key>
+                  <value>3</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="statEst">
+      <regola codiceErrore="B38" nome="regolaDominioValoriAnagrafica">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>nomeTabella</key>
+                  <value>Codice_Paese_ISO</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="tipoEsen">
+      <regola codiceErrore="1921" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="D23" nome="regolaListaValoriAmmessi">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>listaValoriAmmessi</key>
+                  <value> 0|1|2|3|4|5|9</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="codEsen">
+      <regola codiceErrore="1921" nome="regolaObbligatorieta"/>
+   </campo>
+   <campo nomecampo="quotaFissaAss">
+      <regola codiceErrore="2032" nome="regolaLunghezzaCampoFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>size</key>
+                  <value>5</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="costoSrvRic">
+      <regola codiceErrore="1921" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="2032" nome="regolaLunghezzaCampoObbligatorio">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>size</key>
+                  <value>5</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="quotaPercAss">
+      <regola codiceErrore="2032" nome="regolaLunghezzaCampoFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>size</key>
+                  <value>5</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="costoSrv">
+      <regola codiceErrore="1921" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="2032" nome="regolaLunghezzaCampoObbligatorio">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>size</key>
+                  <value>7</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="tipoF">
+      <regola codiceErrore="1921" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="B14" nome="regolaListaValoriAmmessi">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>listaValoriAmmessi</key>
+                  <value> 1|2|3|4|5|6</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="targatura">
+      <regola codiceErrore="1921" nome="regolaObbligatorieta"/>
+   </campo>
+   <campo nomecampo="costoAcq">
+      <regola codiceErrore="1921" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="2032" nome="regolaLunghezzaCampoObbligatorio">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>size</key>
+                  <value>14</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="qta">
+      <regola codiceErrore="1921" nome="regolaObbligatorieta"/>
+   </campo>
+   <campo nomecampo="fattConv">
+      <regola codiceErrore="1921" nome="regolaObbligatorieta"/>
+   </campo>
+   <campo nomecampo="tipoOp">
+      <regola codiceErrore="1921" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="B05" nome="regolaListaValoriAmmessi">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>listaValoriAmmessi</key>
+                  <value>i,I,c,C,v,V</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="codF">
+      <regola codiceErrore="1921" nome="regolaObbligatorieta"/>
+   </campo>
+</flusso>

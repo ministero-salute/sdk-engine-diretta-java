@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flusso>
+   <campo nomecampo="modalita">
+      <regola nome="obbligatorieta" codiceErrore="1801"/>
+      <regola nome="valoriAmmessi" codiceErrore="1802">
+         <parametri>
+            <entry>
+               <key>listaValoriAmmessi</key>
+               <value>TR MV</value>
+            </entry>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="tipo">
+      <regola nome="obbligatorieta" codiceErrore="1901"/>
+      <regola nome="valoriAmmessi" codiceErrore="1902">
+         <parametri>
+            <entry>
+               <key>listaValoriAmmessi</key>
+               <value>i I v V c C</value>
+            </entry>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="codiceRegione">
+      <regola nome="obbligatorieta" codiceErrore="1921"/>
+      <regola nome="anagrafica" codiceErrore="1922">
+         <parametri>
+            <entry>
+               <key>dominioAnagrafica</key>
+               <value>it.mds.sdk.connettore.anagrafiche.tabella.RecordAnagrafica@aa05486 it.mds.sdk.connettore.anagrafiche.tabella.RecordAnagrafica@548fe713 it.mds.sdk.connettore.anagrafiche.tabella.RecordAnagrafica@d595cfd it.mds.sdk.connettore.anagrafiche.tabella.RecordAnagrafica@5614b086 it.mds.sdk.connettore.anagrafiche.tabella.RecordAnagrafica@5e98daa6 it.mds.sdk.connettore.anagrafiche.tabella.RecordAnagrafica@75840919 it.mds.sdk.connettore.anagrafiche.tabella.RecordAnagrafica@32fd0de0 it.mds.sdk.connettore.anagrafiche.tabella.RecordAnagrafica@419e0bb9 it.mds.sdk.connettore.anagrafiche.tabella.RecordAnagrafica@59cba4c6 it.mds.sdk.connettore.anagrafiche.tabella.RecordAnagrafica@c52a227 it.mds.sdk.connettore.anagrafiche.tabella.RecordAnagrafica@569a3c40 it.mds.sdk.connettore.anagrafiche.tabella.RecordAnagrafica@67e836e9 it.mds.sdk.connettore.anagrafiche.tabella.RecordAnagrafica@63015346 it.mds.sdk.connettore.anagrafiche.tabella.RecordAnagrafica@7adb969b it.mds.sdk.connettore.anagrafiche.tabella.RecordAnagrafica@7d24ddbc it.mds.sdk.connettore.anagrafiche.tabella.RecordAnagrafica@5bdde38f it.mds.sdk.connettore.anagrafiche.tabella.RecordAnagrafica@32af10d1 it.mds.sdk.connettore.anagrafiche.tabella.RecordAnagrafica@14662751 it.mds.sdk.connettore.anagrafiche.tabella.RecordAnagrafica@4f74d15c it.mds.sdk.connettore.anagrafiche.tabella.RecordAnagrafica@7b0192a6 it.mds.sdk.connettore.anagrafiche.tabella.RecordAnagrafica@31e22c8f</value>
+            </entry>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="idAssistito">
+      <regola nome="obbligatorieta" codiceErrore="1701"/>
+      <regola nome="lunghezzaObb" codiceErrore="1703">
+         <parametri>
+            <entry>
+               <key>size</key>
+               <value xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xsd:int">172</value>
+            </entry>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="tipoIdAssistito">
+      <regola nome="obbligatorieta" codiceErrore="1601"/>
+      <regola nome="valoriAmmessi" codiceErrore="1602">
+         <parametri>
+            <entry>
+               <key>listaValoriAmmessi</key>
+               <value>0 1 2 3 4 99</value>
+            </entry>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="comuneResidenza">
+      <regola nome="obbligatorieta" codiceErrore="1301"/>
+      <regola nome="lunghezzaObb" codiceErrore="1303">
+         <parametri>
+            <entry>
+               <key>size</key>
+               <value xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xsd:int">6</value>
+            </entry>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="aslResidenza">
+      <regola nome="obbligatorieta" codiceErrore="1201"/>
+      <regola nome="lunghezzaObb" codiceErrore="1203">
+         <parametri>
+            <entry>
+               <key>size</key>
+               <value xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xsd:int">3</value>
+            </entry>
+         </parametri>
+      </regola>
+      <regola nome="coerenzaDiversitaCampo" codiceErrore="1965">
+         <parametri>
+            <entry>
+               <key>valoreCampo</key>
+               <value xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xsd:string">999</value>
+            </entry>
+            <entry>
+               <key>valoreDipendente</key>
+               <value xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xsd:string">IT</value>
+            </entry>
+            <entry>
+               <key>campoDipendente</key>
+               <value xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xsd:string">statoResidenza</value>
+            </entry>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="dataTrasferimentoResidenza">
+      <regola nome="checkData" codiceErrore="6170">
+         <parametri>
+            <entry>
+               <key>formatoData</key>
+               <value xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xsd:string">YYYY-MM-DD</value>
+            </entry>
+         </parametri>
+      </regola>
+      <regola nome="obbligatorietaDipendente" codiceErrore="2010">
+         <parametri>
+            <entry>
+               <key>valorePilota</key>
+               <value xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xsd:string">TR</value>
+            </entry>
+            <entry>
+               <key>nomeCampoPilota</key>
+               <value xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xsd:string">modalita</value>
+            </entry>
+         </parametri>
+      </regola>
+      <regola nome="dataPosteriore" codiceErrore="2020">
+         <parametri>
+            <entry>
+               <key>nomeCampoValidatore</key>
+               <value xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xsd:string">dataNascita</value>
+            </entry>
+         </parametri>
+      </regola>
+      <regola nome="dataAntecedente" codiceErrore="2025">
+         <parametri>
+            <entry>
+               <key>nomeCampoValidatore</key>
+               <value xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xsd:string">dataDecesso</value>
+            </entry>
+         </parametri>
+      </regola>
+      <regola nome="regolaEsistenzaDisuguaglianza" codiceErrore="2030">
+         <parametri>
+            <entry>
+               <key>nomeCampoCoerente</key>
+               <value xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xsd:string">modalita</value>
+            </entry>
+            <entry>
+               <key>listaValoriIncoerenti</key>
+               <value>MV RE</value>
+            </entry>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="dataNascita">
+      <regola nome="obbligatorieta" codiceErrore="1401"/>
+      <regola nome="checkData" codiceErrore="1400">
+         <parametri>
+            <entry>
+               <key>formatoData</key>
+               <value xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xsd:string">YYYY-MM-DD</value>
+            </entry>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="comuneDomicilioSanitario">
+      <regola nome="lunghezza" codiceErrore="1903">
+         <parametri>
+            <entry>
+               <key>size</key>
+               <value xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xsd:int">6</value>
+            </entry>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="aslDomicilioSanitario">
+      <regola nome="lunghezza" codiceErrore="2012">
+         <parametri>
+            <entry>
+               <key>size</key>
+               <value xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xsd:int">3</value>
+            </entry>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="regioneDomicilioSanitario">
+      <regola nome="lunghezza" codiceErrore="2032">
+         <parametri>
+            <entry>
+               <key>size</key>
+               <value xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xsd:int">3</value>
+            </entry>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="cittadinanza">
+      <regola nome="obbligatorieta" codiceErrore="2041"/>
+      <regola nome="lunghezzaObb" codiceErrore="2043">
+         <parametri>
+            <entry>
+               <key>size</key>
+               <value xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xsd:int">2</value>
+            </entry>
+         </parametri>
+      </regola>
+      <regola nome="regolaIncoerenza" codiceErrore="2075">
+         <parametri>
+            <entry>
+               <key>valoreConfronto</key>
+               <value xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xsd:string">IT</value>
+            </entry>
+            <entry>
+               <key>nomeCampoCoerente</key>
+               <value xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xsd:string">tipoIdAssistito</value>
+            </entry>
+            <entry>
+               <key>listaValoriIncoerenti</key>
+               <value xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xsd:string">valoriIncoerenti</value>
+            </entry>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="dataDecesso">
+      <regola nome="checkData" codiceErrore="3000">
+         <parametri>
+            <entry>
+               <key>formatoData</key>
+               <value xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xsd:string">YYYY-MM-DD</value>
+            </entry>
+         </parametri>
+      </regola>
+      <regola nome="dataPosteriore" codiceErrore="2020">
+         <parametri>
+            <entry>
+               <key>nomeCampoValidatore</key>
+               <value xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xsd:string">dataNascita</value>
+            </entry>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="antigene">
+      <regola nome="obbligatorieta" codiceErrore="6141"/>
+      <regola nome="lunghezzaObb" codiceErrore="6140">
+         <parametri>
+            <entry>
+               <key>size</key>
+               <value xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xsd:int">2</value>
+            </entry>
+         </parametri>
+      </regola>
+      <regola nome="campoNumerico" codiceErrore="4100"/>
+   </campo>
+   <campo nomecampo="dose">
+      <regola nome="obbligatorieta" codiceErrore="6051"/>
+      <regola nome="lunghezzaObb" codiceErrore="6050">
+         <parametri>
+            <entry>
+               <key>size</key>
+               <value xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xsd:int">2</value>
+            </entry>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="motivazione">
+      <regola nome="obbligatorieta" codiceErrore="6141"/>
+   </campo>
+   <campo nomecampo="dataNonEffettuazione">
+      <regola nome="obbligatorieta" codiceErrore="8012"/>
+      <regola nome="checkData" codiceErrore="8013">
+         <parametri>
+            <entry>
+               <key>formatoData</key>
+               <value xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xsd:string">YYYY-MM-DD</value>
+            </entry>
+         </parametri>
+      </regola>
+      <regola nome="dataPosteriore" codiceErrore="5005">
+         <parametri>
+            <entry>
+               <key>nomeCampoValidatore</key>
+               <value xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xsd:string">dataNascita</value>
+            </entry>
+         </parametri>
+      </regola>
+      <regola nome="dataAntecedente" codiceErrore="5010">
+         <parametri>
+            <entry>
+               <key>nomeCampoValidatore</key>
+               <value xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xsd:string">dataDecesso</value>
+            </entry>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="validitaCodiceIdentificativo">
+      <regola nome="obbligatorieta" codiceErrore="1701"/>
+      <regola nome="valoriAmmessi" codiceErrore="1702">
+         <parametri>
+            <entry>
+               <key>listaValoriAmmessi</key>
+               <value>0 1</value>
+            </entry>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="sesso">
+      <regola nome="obbligatorieta" codiceErrore="1501"/>
+      <regola nome="valoriAmmessi" codiceErrore="1502">
+         <parametri>
+            <entry>
+               <key>listaValoriAmmessi</key>
+               <value>1 2 9</value>
+            </entry>
+         </parametri>
+      </regola>
+   </campo>
+</flusso>

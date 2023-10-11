@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flusso>
+   <campo nomecampo="regioneErogante">
+      <regola codiceErrore="1921" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+   </campo>
+   <campo nomecampo="annoDiRiferimento">
+      <regola codiceErrore="1921" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="B20" descrizioneErrore="Formato anno errato" nome="regolaRegex">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>regex</key>
+                  <value>[12]\d{3}</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="meseDiRiferimento">
+      <regola codiceErrore="1921" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="B20" descrizioneErrore="Formato mese errato" nome="regolaRegex">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>regex</key>
+                  <value>^((?:0)[1-9]|(?:1)[0-2])$</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="codiceAziendaSanitariaErogante">
+      <regola codiceErrore="1921" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="B42" descrizioneErrore="Codice errato" nome="regolaDominioValoriAnagrafica">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>nomeTabella</key>
+                  <value>ANAG_DIR_ASL</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="tipoErogatore">
+      <regola codiceErrore="1921" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="1921" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+   </campo>
+   <campo nomecampo="codiceStrutturaErogante">
+      <regola codiceErrore="1921" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+   </campo>
+   <campo nomecampo="tipoCanale">
+      <regola codiceErrore="1921" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="8001" descrizioneErrore="Codice non presente nel dominio di riferimento" nome="regolaListaValoriAmmessi">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>listaValoriAmmessi</key>
+                  <value>D|OP|R</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="DataErogazione">
+      <regola codiceErrore="1921" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="B20" descrizioneErrore="Tipo di dato errato o formato data errato" nome="regolaRegex">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>regex</key>
+                  <value>([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="tipoErogazione">
+      <regola codiceErrore="1921" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="1921" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+   </campo>
+   <campo nomecampo="tipoContatto">
+      <regola codiceErrore="1921" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="D06" descrizioneErrore="Codice non presente nel dominio di riferimento" nome="regolaListaValoriAmmessi">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>listaValoriAmmessi</key>
+                  <value>1|2</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="idContatto">
+      <regola codiceErrore="1921" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+   </campo>
+   <campo nomecampo="codicePrescrittore">
+      <regola codiceErrore="D17" descrizioneErrore="Valorizzazione campo errato" nome="regolaOmissioneCrossCampo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>valoreDipendente</key>
+                  <value>Z</value>
+               </entry>
+               <entry>
+                  <key>campoDipendente</key>
+                  <value>tipoPrescrittore</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="tipoPrescrittore">
+      <regola codiceErrore="1921" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+   </campo>
+   <campo nomecampo="dataPrescrizione">
+      <regola codiceErrore="B20" descrizioneErrore="Tipo di dato errato o formato data errato" nome="regolaRegexCampoFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>regex</key>
+                  <value>([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="identificativoAssistito">
+      <regola codiceErrore="1921" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="2043" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaLunghezzaCampoObbligatorio">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>size</key>
+                  <value>88</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="validitaCodIdentAssistito">
+      <regola codiceErrore="1921" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="8001" descrizioneErrore="Codice non presente nel dominio di riferimento" nome="regolaListaValoriAmmessi">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>listaValoriAmmessi</key>
+                  <value>0|1</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="tipologiaCodIdentAssistito">
+      <regola codiceErrore="1921" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="8001" descrizioneErrore="Codice non presente nel dominio di riferimento" nome="regolaListaValoriAmmessi">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>listaValoriAmmessi</key>
+                  <value> 0|1|2|3|4|97|98|99</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="cittadinanza">
+      <regola codiceErrore="2041" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="2043" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaLunghezzaCampoObbligatorio">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>size</key>
+                  <value>2</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+      <regola codiceErrore="2075" descrizioneErrore="Cittadinanza incongruente con la Tipologia del codice identificativo assistito" nome="regolaEsistenzaDisuguaglianzaCrossCampo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>nomeCampoCoerente</key>
+                  <value>tipologiaCodIdentAssistito</value>
+               </entry>
+               <entry>
+                  <key>listaValoriIncoerenti</key>
+                  <value>1|2|3</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="aslAssistito">
+      <regola codiceErrore="1203" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaLunghezzaCampoFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>size</key>
+                  <value>6</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+      <regola codiceErrore="D30" descrizioneErrore="Asl di Residenza incoerente con Stato Estero di Residenza" nome="regolaDiversitaValoreCrossCampoFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>statoEsteroDiResidenza</key>
+                  <value>IT</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="tipoDiEsenzione">
+      <regola codiceErrore="1921" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+   </campo>
+   <campo nomecampo="codiceEsenzione">
+      <regola codiceErrore="1921" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+   </campo>
+   <campo nomecampo="quotaFissaAssistito">
+      <regola codiceErrore="3000" descrizioneErrore="Tipo di dato errato o formato data errato" nome="regolaRegexCampoFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>regex</key>
+                  <value>\b\d{1,3}\.\d{2}\</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+      <regola codiceErrore="2032" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaLunghezzaCampoFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>size</key>
+                  <value>5</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="costoServizioRicetta">
+      <regola codiceErrore="1921" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="2032" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>size</key>
+                  <value>5</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+      <regola codiceErrore="D38" descrizioneErrore="Datatype errato" nome="regolaRegexCampoFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>regex</key>
+                  <value>\b\d{1,3}\.\d{2}\b</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="quotaPercentualeAssistito">
+      <regola codiceErrore="2032" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>size</key>
+                  <value>5</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+      <regola codiceErrore="3000" descrizioneErrore="Datatype errato" nome="regolaRegexCampoFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>regex</key>
+                  <value>\b\d{1,3}\.\d{2}\b</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="costoServizio">
+      <regola codiceErrore="1921" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="2032" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>size</key>
+                  <value>7</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+      <regola codiceErrore="B41" descrizioneErrore="Datatype errato" nome="regolaRegexCampoFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>regex</key>
+                  <value>\b\d{1,3}\.\d{2}\b</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="tipoFarmaco">
+      <regola codiceErrore="1921" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="B14" descrizioneErrore="Codice non presente nel dominio di riferimento" nome="regolaListaValoriAmmessi">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>listaValoriAmmessi</key>
+                  <value> 1|2|3|4|5|6</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="targatura">
+      <regola codiceErrore="1921" descrizioneErrore="&quot;Mancata valorizzazione di un campo obbligatorio&quot;" nome="regolaObbligatorieta"/>
+   </campo>
+   <campo nomecampo="costoAcquisto">
+      <regola codiceErrore="1921" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="2032" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaCampoObbligatorio">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>14</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+      <regola codiceErrore="B41" descrizioneErrore="Tipo di dato errato o formato data errato" nome="regolaRegex">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>regex</key>
+                  <value>\b\d{1,8}\.\d{2,5}\b</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="quantita">
+      <regola codiceErrore="1921" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+   </campo>
+   <campo nomecampo="fattoreDiConversione">
+      <regola codiceErrore="1921" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="2032" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaCampoObbligatorio">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>6</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+      <regola codiceErrore="3000" descrizioneErrore="Tipo di dato errato o formato data errato" nome="regolaRegex">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>regex</key>
+                  <value>\b\d{1,6}[\.]*\d{0,2}\b</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="tipoOperazione">
+      <regola codiceErrore="1921" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="B05" descrizioneErrore="Codice non presente nel dominio di riferimento" nome="regolaListaValoriAmmessi">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>listaValoriAmmessi</key>
+                  <value>i,I,c,C,v,V</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+   </campo>
+   <campo nomecampo="codiceFarmaco">
+      <regola codiceErrore="1921" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+   </campo>
+</flusso>

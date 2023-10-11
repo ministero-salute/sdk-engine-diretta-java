@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flusso>
+    <campo nomecampo="modalita">
+        <regola nome="obbligatorieta" codiceErrore="1801"/>
+        <regola nome="valoriAmmessi" codiceErrore="1802">
+            <parametri2>
+                <entry>
+                    <key>listaValoriAmmessi</key>
+                    <value>TR MV</value>
+                </entry>
+            </parametri2>
+        </regola>
+    </campo>
+</flusso>
