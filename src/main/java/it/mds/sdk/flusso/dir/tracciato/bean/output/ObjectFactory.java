@@ -6,6 +6,8 @@
 //
 
 
+/* SPDX-License-Identifier: BSD-3-Clause */
+ 
 package it.mds.sdk.flusso.dir.tracciato.bean.output;
 
 import jakarta.xml.bind.annotation.XmlRegistry;

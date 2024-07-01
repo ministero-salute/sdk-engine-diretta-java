@@ -1,3 +1,5 @@
+/* SPDX-License-Identifier: BSD-3-Clause */
+ 
 package it.mds.sdk.flusso.dir.controller;
 
 import it.mds.sdk.flusso.dir.parser.regole.RecordDtoDir;
